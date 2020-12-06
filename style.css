@@ -1,0 +1,103 @@
+body {
+    font-family: "Didot";
+    font-size: 1.5vw;
+}
+
+.fa {
+    padding: 0.5em;
+    width: 2em;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.content {
+    text-align: center;
+    overflow: auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 50px 50px;
+    grid-template-areas: "image1 logo image2";
+}
+
+.image {
+    grid-area: image1;
+    display: inline-flex;
+    background-image: url("images/photo1-300.jpg");
+    width: 300px;
+    height: 300px;
+}
+
+.blurred-edge {
+    border-radius: 50%;
+    box-shadow: 0 0 8px 8px white inset;
+}
+
+.image-2 {
+    grid-area: image2;
+    display: inline-flex;
+    background-image: url("images/photo2-300.jpg");
+    width: 300px;
+    height: 300px;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.logo > img {
+    width: 25vw;
+}
+
+.text {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 4vw;
+    }
+
+    .wrapper {
+        grid-gap: 10px 0px;
+        grid-template-areas: 
+        "logo logo"
+        "image1 image2";
+    }
+
+    .image {
+        background-image: url("images/photo1-180.jpg");
+        width: 190px;
+        height: 190px;
+    }
+
+    .image-2 {
+        background-image: url("images/photo2-180.jpg");
+        width: 190px;
+        height: 190px;
+    }
+
+    .logo > img {
+        width: 50vw;
+    }
+}
